@@ -26,8 +26,7 @@ class User {
 
 class FetchUsers {
   Future<List<User>> getUsers() async {
-    final response =
-        await http.get(Uri.parse('http://54.241.144.146:8080/users'));
+    final response = await http.get(Uri.parse('http://10.0.2.2:5000/users'));
     if (response.statusCode == 200) {
       List userData = jsonDecode(response.body);
       List<User> userList = [];

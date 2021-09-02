@@ -52,14 +52,11 @@ class _HomeState extends State<Home> {
                         : _controller.curIndex.value == 1
                             ? userListView(futureUser)
                             : Center(
-                                child: Text(
-                                  'Under Development',
-                                  style: TextStyle(
-                                    fontSize: 32,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
+                                child: Text('Under Development',
+                                    style: TextStyle(
+                                      fontSize: 32,
+                                      fontWeight: FontWeight.bold,
+                                    ))),
                   ),
                 ),
               ],

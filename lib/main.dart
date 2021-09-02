@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primaryColor: ThemeColors().primaryColor,
         accentColor: ThemeColors().accentColor,
       ),
-      home: Login(),
+      home: UserDetail(),
       getPages: [
         GetPage(name: '/Home-Page', page: () => Home()),
         GetPage(name: '/User-Details-Page', page: () => UserDetail()),
