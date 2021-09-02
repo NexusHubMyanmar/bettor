@@ -40,11 +40,8 @@ class _LoginState extends State<Login> {
                       return _tabController.index.value == 0
                           ? Column(
                               children: [
-                                SizedBox(height: 20),
                                 userInput(context, 'Username', false),
-                                SizedBox(height: 20),
                                 userInput(context, 'Password', true),
-                                SizedBox(height: 20),
                                 themeButton(
                                   context,
                                   'Confirm',
@@ -74,11 +71,14 @@ class _LoginState extends State<Login> {
   }
 
   Widget userInput(BuildContext context, String placeholder, bool hide) {
-    return TextField(
-      obscureText: hide,
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        labelText: placeholder,
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10),
+      child: TextField(
+        obscureText: hide,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(),
+          labelText: placeholder,
+        ),
       ),
     );
   }
@@ -86,7 +86,7 @@ class _LoginState extends State<Login> {
   Widget themeButton(
       BuildContext context, String text, Size size, Color color) {
     return ElevatedButton(
-      onPressed: () => Get.off(Home()),
+      onPressed: () => Get.off(() => Home()),
       child: Text(text),
       style: ElevatedButton.styleFrom(
         primary: color,

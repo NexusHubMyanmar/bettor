@@ -1,6 +1,7 @@
 import 'package:betgame/Constants/ThemeColors.dart';
 import 'package:betgame/home.dart';
 import 'package:betgame/login.dart';
+import 'package:betgame/user_details.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       home: Login(),
       getPages: [
         GetPage(name: '/Home-Page', page: () => Home()),
+        GetPage(name: '/User-Details-Page', page: () => UserDetail()),
       ],
     );
   }
